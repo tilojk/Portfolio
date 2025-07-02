@@ -1,36 +1,76 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Tilo's Portfolio
 
-## Getting Started
+Dieses Projekt ist ein modernes Portfolio, entwickelt mit [Next.js](https://nextjs.org), GSAP und verschiedenen Icon-Bibliotheken.
 
-First, run the development server:
+---
+
+## Voraussetzungen
+
+### Node.js installieren
+
+Lade die aktuelle LTS-Version von [https://nodejs.org](https://nodejs.org) herunter und installiere sie.
+Prüfe anschließend die Installation:
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+node -v
+npm -v
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+---
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+### Icons
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+Im Ordner /client:
 
-## Learn More
+```bash
+npm install @heroicons/react
+npm install --save @fortawesome/fontawesome-svg-core
+npm install --save @fortawesome/free-brands-svg-icons
+npm install --save @fortawesome/react-fontawesome
+npm install simple-icons
+```
 
-To learn more about Next.js, take a look at the following resources:
+### Animationen
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Im Ordner /client:
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+```bash
+npm install gsap
+npm install @gsap/react
+```
 
-## Deploy on Vercel
+### Backend / Mailversand
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+Im Root-Ordner
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+```bash
+npm install express nodemailer cors dotenv
+```
+
+---
+
+## Projekt ausführen
+
+### Frontend
+
+Im Ordner /client:
+
+```bash
+npm start
+```
+
+### Backend
+
+Im Root-Ordner
+
+```bash
+node server.js
+```
+
+## Ressourcen
+
+- [Next.js Dokumentation](https://nextjs.org/docs)
+- [Next.js Lernen](https://nextjs.org/learn)
+- [Next.js GitHub](https://github.com/vercel/next.js)
+
+---
