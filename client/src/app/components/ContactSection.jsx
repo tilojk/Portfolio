@@ -40,7 +40,7 @@ const ContactSection = () => {
     };
 
     try {
-      const res = await fetch("/api/send", {
+      const res = await fetch("http://217.154.223.88/api/send", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(data),
