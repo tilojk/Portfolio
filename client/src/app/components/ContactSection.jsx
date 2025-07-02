@@ -27,7 +27,7 @@ const ContactSection = () => {
     });    
   });
 
-  
+
   const handleSubmit = async (e) => {
     e.preventDefault();
     const form = e.currentTarget;
@@ -40,7 +40,7 @@ const ContactSection = () => {
     };
 
     try {
-      const res = await fetch("http://192.168.0.186:3001/send", {
+      const res = await fetch("http://localhost:3001/send", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(data),
