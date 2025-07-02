@@ -1,15 +1,14 @@
 # Tilo's Portfolio
 
-Dieses Projekt ist ein modernes Portfolio, entwickelt mit [Next.js](https://nextjs.org), GSAP und verschiedenen Icon-Bibliotheken.
+This project is a modern portfolio built with [Next.js](https://nextjs.org), GSAP, and various icon libraries.
 
 ---
 
-## Voraussetzungen
+## Prerequisites
 
-### Node.js installieren
+### Install Node.js
 
-Lade die aktuelle LTS-Version von [https://nodejs.org](https://nodejs.org) herunter und installiere sie.
-Prüfe anschließend die Installation:
+Download and install the latest LTS version from [https://nodejs.org](https://nodejs.org). Then verify the installation:
 
 ```bash
 node -v
@@ -20,7 +19,7 @@ npm -v
 
 ### Icons
 
-Im Ordner /client:
+In the `/client` directory, run:
 
 ```bash
 npm install @heroicons/react
@@ -30,18 +29,18 @@ npm install --save @fortawesome/react-fontawesome
 npm install simple-icons
 ```
 
-### Animationen
+### Animations
 
-Im Ordner /client:
+Also in the `/client` directory:
 
 ```bash
 npm install gsap
 npm install @gsap/react
 ```
 
-### Backend / Mailversand
+### Backend / Email Handling
 
-Im Root-Ordner
+In the root directory:
 
 ```bash
 npm install express nodemailer cors dotenv
@@ -49,11 +48,11 @@ npm install express nodemailer cors dotenv
 
 ---
 
-## Projekt ausführen
+## Run the Project
 
 ### Frontend
 
-Im Ordner /client:
+In the `/client` directory:
 
 ```bash
 npm start
@@ -61,16 +60,16 @@ npm start
 
 ### Backend
 
-Im Root-Ordner
+In the root directory:
 
 ```bash
 node server.js
 ```
 
-## Ressourcen
-
-- [Next.js Dokumentation](https://nextjs.org/docs)
-- [Next.js Lernen](https://nextjs.org/learn)
-- [Next.js GitHub](https://github.com/vercel/next.js)
-
 ---
+
+## Resources
+
+- [Next.js Documentation](https://nextjs.org/docs)  
+- [Learn Next.js](https://nextjs.org/learn)  
+- [Next.js GitHub](https://github.com/vercel/next.js)
