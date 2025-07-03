@@ -185,7 +185,7 @@ const ProjectOverlay = ({origin, title, text, images, faIcons, siIcons, onClose}
                             alt={`Slide ${index}`}
                             fill
                             className="object-cover"
-                            sizes="(min-width: 1536px) 1920, 1440, 1024px, 768px"
+                            sizes="(min-width: 1536px) 1440px, 1024px, 768px"
                         />
                         </div>
                     ))}
