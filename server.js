@@ -1,17 +1,41 @@
-require('dotenv').config(); // .env-Datei laden
 const express = require('express');
-const nodemailer = require('nodemailer');
 const cors = require('cors');
+require('dotenv').config();
 
 const app = express();
 const PORT = 3001;
 
-// Middleware
 app.use(cors());
 app.use(express.json());
 
-// Route für den Formularversand
-app.post('/send', async (req, res) => {
+// Einfaches Basic Auth Middleware
+function basicAuth(req, res, next) {
+  const auth = req.headers.authorization;
+
+  if (!auth || !auth.startsWith('Basic ')) {
+    res.setHeader('WWW-Authenticate', 'Basic realm="Bitte anmelden"');
+    return res.status(401).send('Authentication required.');
+  }
+
+  // Base64 decode: "username:password"
+  const base64Credentials = auth.split(' ')[1];
+  const credentials = Buffer.from(base64Credentials, 'base64').toString('ascii');
+  const [username, password] = credentials.split(':');
+
+  // Prüfe Benutzername und Passwort gegen Umgebungsvariablen
+  if (
+    username === process.env.BASIC_AUTH_USER &&
+    password === process.env.BASIC_AUTH_PASS
+  ) {
+    return next();
+  } else {
+    res.setHeader('WWW-Authenticate', 'Basic realm="Bitte anmelden"');
+    return res.status(401).send('Authentication required.');
+  }
+}
+
+// Route mit Basic Auth schützen
+app.post('/send', basicAuth, async (req, res) => {
   const { email, subject, message } = req.body;
 
   if (!email || !subject || !message) {
@@ -19,15 +43,15 @@ app.post('/send', async (req, res) => {
   }
 
   try {
-
+    const nodemailer = require('nodemailer');
     const transporter = nodemailer.createTransport({
-        host: "securesmtp.t-online.de",
-        port: 465,
-        secure: true,
-        auth: {
-            user: process.env.EMAIL_USER,
-            pass: process.env.EMAIL_PASS,
-        },
+      host: "securesmtp.t-online.de",
+      port: 465,
+      secure: true,
+      auth: {
+        user: process.env.EMAIL_USER,
+        pass: process.env.EMAIL_PASS,
+      },
     });
 
     const mailOptions = {
@@ -59,13 +83,10 @@ app.post('/send', async (req, res) => {
       `
     };
 
-    // Beide Mails senden
     await transporter.sendMail(mailOptions);
     await transporter.sendMail(mailConfirmation);
 
-    // Nur EINE Antwort zurücksenden
     return res.status(200).json({ message: 'E-Mails wurden erfolgreich versendet' });
-
   } catch (error) {
     console.error('Fehler beim E-Mail-Versand:', error);
     return res.status(500).json({ error: 'E-Mail-Versand fehlgeschlagen' });

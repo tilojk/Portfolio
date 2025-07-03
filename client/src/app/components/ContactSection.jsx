@@ -10,6 +10,9 @@ gsap.registerPlugin(useGSAP, ScrollTrigger);
 
 const ContactSection = () => {
   const imageRef= useRef(null);
+  const username = process.env.NEXT_PUBLIC_BASIC_AUTH_USER;
+  const password = process.env.NEXT_PUBLIC_BASIC_AUTH_PASS;
+  const credentials = btoa(`${username}:${password}`);
 
   useGSAP(() => {
     //Hero-Animation       
@@ -42,7 +45,10 @@ const ContactSection = () => {
     try {
       const res = await fetch("/api/send", {
         method: "POST",
-        headers: { "Content-Type": "application/json" },
+        headers: { 
+          "Content-Type": "application/json",
+          "Authorization": `Basic ${credentials}`,
+         },
         body: JSON.stringify(data),
       });
 
