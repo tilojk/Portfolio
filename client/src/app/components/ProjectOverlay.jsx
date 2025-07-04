@@ -9,7 +9,7 @@ import { useGSAP } from "@gsap/react";
 import { Flip } from 'gsap/Flip';
 gsap.registerPlugin(useGSAP, Flip);
 
-const ProjectOverlay = ({origin, title, text, images, faIcons, siIcons, onClose}) => {
+const ProjectOverlay = ({origin, title, text, images, faTitles, faIcons, siIcons, onClose}) => {
 
   const [currentIndex, setCurrentIndex] = useState(1); //Starte beim ersten echten Bild
   const [isTransitionEnabled, setIsTransitionEnabled] = useState(true);
@@ -238,7 +238,7 @@ const ProjectOverlay = ({origin, title, text, images, faIcons, siIcons, onClose}
                     </p>
                     <h4 className="text-xl md:text-2xl 2xl:text-3xl pb-2">Verwendete Technologien</h4>
                     <div className="flex flex-row gap-2">
-                        {faIcons.map((faIcon, index) => <FontAwesomeIcon key={index} icon={faIcon} className='text-2xl'/>)}
+                        {faIcons.map((faIcon, index) => <FontAwesomeIcon key={index} title={faTitles[index]} icon={faIcon} className='text-2xl'/>)}
                         {siIcons.map((siIcon, index) => <SimpleIcon key={index} icon={siIcon} size="24"/>)}
                     </div>
                 </div>

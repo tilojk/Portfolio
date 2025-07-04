@@ -20,6 +20,7 @@ const projects = [
       '/images/projects/mi_universum/screenshot_skills.png',
     ],
     text: "Im 4. Semester haben wir im Team das \„THM Medieninformatik Universum\“ entwickelt. Dabei handelt es sich um eine Website, um Interessierten interaktiv das Medieninformatik-Studium vorzustellen. Ich war für die Planetenansicht, die Skillübersicht und einzelne Level zuständig.",
+    faTitles: ["HTML", "CSS", "Javascript"],
     faIcons: [faHtml5, faCss, faJs],
     siIcons: [],
   },
@@ -40,6 +41,7 @@ const projects = [
       "/images/projects/bobrmon/screenshot_fight_2.png",
     ],
     text: "Im 4. Semester haben wir im Team das Online-Programmierlernspiel \„Bobrmon\“ und eine dazugehörige Landingpage entwickelt. Ich war dabei für die Landingpage und die Mitgestaltung der Kämpfe verantwortlich.",
+    faTitles: ["HTML", "CSS", "Javascript"],
     faIcons: [faHtml5, faCss, faJs],
     siIcons: [],
   },
@@ -54,6 +56,7 @@ const projects = [
       "/images/projects/pizzalab/screenshot_warenkorb.png",
     ],
     text: "Im 5. Semester haben wir im Team \"PizzaLab\" entwickelt. Dabei handelt es sich um einen Online-Pizzakonfigurator, an dessen Beispiel wir die Frameworks Vue.js und React miteinander verglichen haben. Ich war dabei für die Mitgestaltung der Benutzeroberfläche und die Umsetzung des Chatbots verantwortlich.",
+    faTitles: ["React", "Vue.js"],
     faIcons: [faReact, faVuejs],
     siIcons: [siNestjs],
   },
@@ -111,6 +114,7 @@ const ProjectSection = () => {
         title={selectedProject.title} 
         images={selectedProject.images} 
         text={selectedProject.text}
+        faTitles={selectedProject.faTitles}
         faIcons={selectedProject.faIcons} 
         siIcons={selectedProject.siIcons}
         onClose={() => setIsOverlayOpen(false)}
