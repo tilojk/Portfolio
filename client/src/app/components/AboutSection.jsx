@@ -53,7 +53,7 @@ const AboutSection = () => {
             <h2 className="text-4xl md:text-5xl mt-8 mb-4 lg:mb-8 xl:mb-12 2xl:mb-16 xl:-mt-4 text-center"><b>&Uuml;ber mich</b></h2>
             <div className="w-full flex flex-col items-center lg:flex-row lg:justify-center gap-8 lg:gap-12 p-4 xl:p-0">
                 <div className="animated relative w-64 h-64 md:w-72 md:h-72 lg:w-80 lg:h-80 2xl:h-96 2xl:w-96 lg:order-2">
-                    <Image src="/images/about/about.jpg" className="object-cover rounded-full" fill alt="Foto von Tilo Jäkel" sizes="(min-width: 1536px) 384px, (min-width: 1024px) 320px, (min-width: 768px) 288px, 256px"/>
+                    <Image src="/images/about/about.jpg?v=2" className="object-cover rounded-full" fill alt="Foto von Tilo Jäkel" sizes="(min-width: 1536px) 384px, (min-width: 1024px) 320px, (min-width: 768px) 288px, 256px"/>
                 </div>
                 <div className="w-full lg:w-2/3 xl:w-1/2 flex flex-col gap-4 z-25 lg:order-1 mb-4">
                     {aboutTexts.map((text, index) => (
