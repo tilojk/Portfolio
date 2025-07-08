@@ -74,7 +74,7 @@ const projects = [
     images: [
       "/images/projects/portfolio/mockup.jpg"
     ],
-    text: "Diese Portfolio-Website habe ich entwickelt, um meine Fähigkeiten und Projekte ansprechend vorzustellen.",
+    text: "Ein modernes Webdesigner-Portfolio, das responsives Design, UI/UX-Fähigkeiten und Frontend-Entwicklung mit Next.js, GSAP und Tailwindcss präsentiert.",
     faIcons: [],
     siIcons: [siNextdotjs, siTailwindcss],
   },
