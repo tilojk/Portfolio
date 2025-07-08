@@ -40,7 +40,7 @@ const projects = [
       "/images/projects/bobrmon/screenshot_fight.png",
       "/images/projects/bobrmon/screenshot_fight_2.png",
     ],
-    text: "Im 4. Semester haben wir im Team das Online-Programmierlernspiel \„Bobrmon\“ und eine dazugehörige Landingpage entwickelt. Ich war dabei für die Landingpage und die Mitgestaltung der Kämpfe verantwortlich.",
+    text: "Im 5. Semester haben wir im Team das Online-Programmierlernspiel \„Bobrmon\“ und eine dazugehörige Landingpage entwickelt. Ich war dabei für die Landingpage und die Mitgestaltung der Kämpfe verantwortlich.",
     faTitles: ["HTML", "CSS", "Javascript"],
     faIcons: [faHtml5, faCss, faJs],
     siIcons: [],
