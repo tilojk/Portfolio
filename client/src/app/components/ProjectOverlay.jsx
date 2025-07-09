@@ -161,7 +161,7 @@ const ProjectOverlay = ({origin, title, text, images, faTitles, faIcons, siIcons
         <div className='fixed top-0 min-h-screen w-full flex justify-center items-center z-150'>
             <div ref={cardRef} className="container relative m-4 w-3xl 2xl:w-5xl bg-neutral-3/20 backdrop-blur-sm rounded-xl">
                 <div className="absolute top-0 w-full flex justify-end bg-gradient-to-b rounded-t-xl from-black/20 to-black/0 p-4 z-50">
-                    <button onClick={() => {tl.current.reverse(); enableScroll();}} className='cursor-pointer h-10 w-10 md:h-8 md:w-8 hover:text-secondary-1 transition-all duration-150'>
+                    <button onClick={() => {tl.current.reverse(); enableScroll();}} className='cursor-pointer h-10 w-10 md:h-8 md:w-8 3xl:w-10 3xl:h-10 hover:text-secondary-1 transition-all duration-150'>
                             <XMarkIcon className='h-10 w-10 md:h-8 md:w-8'/>
                     </button>
                 </div>
@@ -232,11 +232,11 @@ const ProjectOverlay = ({origin, title, text, images, faTitles, faIcons, siIcons
                             </div>
                     </div>}
                 </div> 
-                <div className="p-4">
-                    <h3 className="text-2xl md:text-3xl 2xl:text-4xl pb-2"><b>{title}</b></h3>
-                    <p className='text-base pb-4' dangerouslySetInnerHTML={{ __html: text }}>
+                <div className="p-4 3xl:p-8">
+                    <h3 className="text-2xl md:text-3xl 2xl:text-4xl pb-2 3xl:pb-6"><b>{title}</b></h3>
+                    <p className='text-base 3xl:text-lg pb-6' dangerouslySetInnerHTML={{ __html: text }}>
                     </p>
-                    <h4 className="text-xl md:text-2xl 2xl:text-3xl pb-2">Verwendete Technologien</h4>
+                    <h4 className="text-xl md:text-2xl 2xl:text-3xl pb-2 3xl:pb-4">Verwendete Technologien</h4>
                     <div className="flex flex-row gap-2">
                         {faIcons.map((faIcon, index) => <FontAwesomeIcon key={index} title={faTitles[index]} icon={faIcon} className='text-2xl'/>)}
                         {siIcons.map((siIcon, index) => <SimpleIcon key={index} icon={siIcon} size="24"/>)}

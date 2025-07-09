@@ -279,7 +279,7 @@ const CvSection = () => {
   return (
     <section id="cv" ref={sectionRef} className='w-full min-h-screen bg-bluebg overflow-visible relative'>
         <div className='relative z-10 w-full min-h-screen'>
-            <h2 className="text-4xl md:text-5xl pt-16 mb-4 lg:mb-8 xl:mb-12 2xl:mb-16 text-center">
+            <h2 className="text-4xl md:text-5xl 3xl:text-6xl pt-16 3xl:pt-24 mb-4 lg:mb-8 xl:mb-12 2xl:mb-16 text-center">
                 <b>Wie</b> ich <b>hierher gekommen</b> bin
             </h2>
             <div className='p-4 md:absolute md:top-5/12 md:left-2/3 md:transform md:-translate-y-1/2 md:-translate-x-1/2 md:w-1/2'>

@@ -110,7 +110,7 @@ const NavOverlay = ({ onClose }) => {
         </button>
     </div>
     <div ref={overlayRef} className='absolute top-0 min-h-screen w-full bg-neutral-950/80 backdrop-blur-sm flex flex-col justify-center items-center z-40'>
-        <ul className='flex flex-col gap-8 justify-center items-center px-8 w-full'>
+        <ul className='flex flex-col gap-8 3xl:gap-12 justify-center items-center px-8 w-full'>
             {navLinks.map((link, index) => (
                 <li className="text-center" key={index}>
                     <NavLink href={link.path} onClick={handleNavClick(link.path)}>{link.title}</NavLink>

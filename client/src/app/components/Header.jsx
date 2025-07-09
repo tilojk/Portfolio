@@ -63,12 +63,12 @@ const Header = () => {
     <section id="start" className="flex flex-col min-h-screen w-full relative overflow-hidden">
         <div className="flex flex-col mt-24 md:mt-0 md:min-h-screen w-full justify-center items-center absolute z-10">
             <div className="container py-4 px-12 text-center">
-                <h1 ref={(el) => (textRef.current[0] = el)} className="opacity-0 text-4xl md:text-6xl 2xl:text-7xl mb-8">Hi, ich bin <b>Tilo</b>.</h1>
-                <p className="text-base mb-2 flex flex-col gap-2 items-center justify-center"><span className="opacity-0" ref={(el) => (textRef.current[1] = el)}>Ich verbinde Technik und Gestaltung zu digitalen Erlebnissen, die funktionieren und begeistern.</span><span className="opacity-0" ref={(el) => (textRef.current[2] = el)}>Das ist mein Portfolio.</span></p>
+                <h1 ref={(el) => (textRef.current[0] = el)} className="opacity-0 text-4xl md:text-6xl 3xl:text-7xl mb-8">Hi, ich bin <b>Tilo</b>.</h1>
+                <p className="text-base 3xl:text-lg mb-2 flex flex-col gap-2 items-center justify-center"><span className="opacity-0" ref={(el) => (textRef.current[1] = el)}>Ich verbinde Technik und Gestaltung zu digitalen Erlebnissen, die funktionieren und begeistern.</span><span className="opacity-0" ref={(el) => (textRef.current[2] = el)}>Das ist mein Portfolio.</span></p>
             </div>
         </div>
         <div ref={containerRef} className="container w-full min-h-screen">
-            <div ref={(el) => (layersRef.current[0] = el)} className="absolute will-change-transform max-h-1/2 md:max-h-4/5 lg:max-h-3/4 w-96 h-96 lg:w-108 lg:h-108 2xl:w-128 2xl:h-128 -bottom-2 -right-20 md:-right-8 lg:right-24 z-5">
+            <div ref={(el) => (layersRef.current[0] = el)} className="absolute will-change-transform max-h-1/2 md:max-h-4/5 lg:max-h-3/4 w-96 h-96 lg:w-108 lg:h-108 2xl:w-128 2xl:h-128 3xl:w-136 3xl:h-136 -bottom-2 -right-20 md:-right-8 lg:right-24 z-5">
                 <Image ref={imageRef} className="opacity-0 object-contain" src="/images/header/me_sitting.png" fill alt="Hero sitzt" sizes="(max-width: 767px) 384px, 432px (max-width: 1023px) 384px, 432px (max-width: 1535px) 512px, 1048px" />
             </div>
             <div ref={(el) => (layersRef.current[1] = el)} className="absolute opacity-0 w-[150%] left-1/2 will-change-transform transform -translate-x-1/2 md:w-full mt-12 md:mt-0 min-h-screen blur-[0.5px] bg-[url('/images/header/parallax_layer_1.png')] bg-contain bg-center bg-no-repeat z-4"></div>

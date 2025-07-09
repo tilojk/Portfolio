@@ -87,13 +87,13 @@ const ProjectSection = () => {
   const projectCardsRef = useRef([]);
 
   return (
-    <section id="projects" className='relative w-full min-h-screen 2xl:min-h-auto bg-bluebg'>
+    <section id="projects" className='relative w-full min-h-auto bg-bluebg'>
       <div className='absolute h-full w-full bg-[linear-gradient(to_bottom,_transparent_0rem,_#1E2A45_5rem,_#1C1C1C_100%)] z-25'></div>
         <div className='relative z-30'>
-          <h2 className="text-4xl md:text-5xl pt-20 mb-8 lg:mb-8 xl:mb-12 2xl:mb-16 text-center">
+          <h2 className="text-4xl md:text-5xl 3xl:text-6xl pt-20 mb-8 lg:mb-8 xl:mb-12 2xl:mb-16 text-center">
               <b>Ausgewählte Projekte</b>
           </h2>
-          <div className='w-full min-h-[calc(100vh-16rem)] 2xl:min-h-auto flex flex-wrap xl:flex-nowrap flex-row justify-center items-center p-8 gap-8 lg:mb-16'>
+          <div className='w-full min-h-auto flex flex-wrap xl:flex-nowrap flex-row justify-center items-center p-8 gap-8 lg:mb-16'>
               {projects.map((project, index) => (
                 <ProjectCard key={index} onClick={() => {
                   setIsOverlayOpen(true);
