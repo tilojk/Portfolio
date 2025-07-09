@@ -38,14 +38,6 @@ npm install gsap
 npm install @gsap/react
 ```
 
-### Responsive
-
-Also in the `/client` directory:
-
-```bash
-npm install react-responsive
-```
-
 ### Backend / Email Handling
 
 In the root directory:
